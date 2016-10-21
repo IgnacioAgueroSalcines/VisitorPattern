@@ -1,22 +1,27 @@
 ﻿using Composite;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using VisitorPattern;
 
-namespace VisitorPattern
+namespace VisitorPatternConsole
 {
-    /// <summary>
-    /// Clase que comprueba el funcionamiento de la impresion del contenido de forma compacta
-    /// </summary>
-    class MainCompacto
+    class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Visitor Pattern");
+
             IVisitor v = new ImprimeArbolCompacto();
 
-            Composite.Composite root= inicialize();
+            Composite.Composite root = inicialize();
 
-            root.ToString();
+            Console.WriteLine(root.ToString());
+
+            Console.Read();
         }
-       
 
         public static Composite.Composite inicialize()
         {

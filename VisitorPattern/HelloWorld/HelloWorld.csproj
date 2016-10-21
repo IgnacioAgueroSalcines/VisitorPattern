@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0C8D6DA6-E6AC-49DE-9053-EC300A6C5334}</ProjectGuid>
+    <ProjectGuid>{6D85C7FA-BFEE-4E59-ADD0-BBE6FDD3D716}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VisitorPatternConsole</RootNamespace>
-    <AssemblyName>VisitorPatternConsole</AssemblyName>
+    <RootNamespace>HelloWorld</RootNamespace>
+    <AssemblyName>HelloWorld</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,17 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Archivo.cs" />
-    <Compile Include="Componente.cs" />
-    <Compile Include="Composite.cs" />
-    <Compile Include="Comprimido.cs" />
-    <Compile Include="Directorio.cs" />
-    <Compile Include="EnlaceDirecto.cs" />
-    <Compile Include="ImprimeArbolCompacto.cs" />
-    <Compile Include="IVisitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Renombrable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

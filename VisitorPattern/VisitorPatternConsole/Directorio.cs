@@ -37,5 +37,18 @@ namespace Composite
             }
             return tamano + res;
         }
+
+        
+
+        public override String ToStringExtends()
+        {
+            String res = "D " + this.nombre;
+            res += "\n";
+            for (int i = 0; i < componentes.Count; i++)
+            {
+                res += componentes[i].ToStringExtends() + "  ";
+            }
+            return res;
+        }
     }
 }

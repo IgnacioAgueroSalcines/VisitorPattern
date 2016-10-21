@@ -40,5 +40,10 @@ namespace Composite
             return this.nombre;
         }
 
+        public override String ToStringExtends()
+        {
+            return "F "+this.nombre+".jpg";
+        }
+
     }
 }

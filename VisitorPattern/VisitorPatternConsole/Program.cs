@@ -12,24 +12,30 @@ namespace VisitorPatternConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Visitor Pattern");
+            Console.WriteLine("Visitor Pattern\n");
 
             IVisitor v = new ImprimeArbolCompacto();
+            IVisitor v2 = new ImprimeArbolExtendido();
 
-            Composite.Composite root = inicialize();
+            Directorio root = inicialize();
 
-            Console.WriteLine(root.ToString());
+            Console.WriteLine("\nCompacto\n");
+            v.ImprimeDirectorio(root);
+
+            Console.WriteLine("\nExtendido\n");
+            v2.ImprimeDirectorio(root);
 
             Console.Read();
         }
 
-        public static Composite.Composite inicialize()
+        public static Directorio inicialize()
         {
             //inicio creacion del arbol
             Archivo arc = new Archivo("hoja4", 5);
-            Composite.Composite composite = new Directorio("root");
-            Composite.Composite composite2 = new Directorio("dir");
-            Composite.Composite composite3 = new Comprimido("comp");
+            Archivo arc2 = new Archivo("hoja1", 5);
+            Directorio composite = new Directorio("root");
+            Directorio composite2 = new Directorio("dir");
+            Comprimido composite3 = new Comprimido("comp");
 
 
             composite3.addComponente(new Archivo("hoja1", 5));
@@ -38,11 +44,12 @@ namespace VisitorPatternConsole
             composite2.addComponente(new Archivo("hoja3", 5));
             composite2.addComponente(composite3);
 
-            EnlaceDirecto e = new EnlaceDirecto(composite2);
+            EnlaceDirecto e = new EnlaceDirecto(arc2);
 
+            composite.addComponente(e);
             composite.addComponente(arc);
             composite.addComponente(composite2);
-            composite.addComponente(e);
+            
             //fin creacion del arbol
 
             return composite;

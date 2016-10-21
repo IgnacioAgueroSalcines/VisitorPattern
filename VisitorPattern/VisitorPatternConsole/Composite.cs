@@ -61,13 +61,13 @@ namespace Composite
             return componentes;
         }
 
-        public override String ToString()
+        public  override String ToString()
         {
             String res = this.nombre;
-            res +="\n";
-            for (int i=0;i<componentes.Count;i++)
+            res += "\n";
+            for (int i = 0; i < componentes.Count; i++)
             {
-                res += componentes[i].ToString();
+                res += componentes[i].ToString() + "  ";
             }
             return res;
         }

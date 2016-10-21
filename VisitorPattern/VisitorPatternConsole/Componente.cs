@@ -12,5 +12,6 @@ namespace Composite
         public abstract int getTamano();
         public abstract int elementos();
         public abstract void accept(IVisitor v);
+        public abstract String ToStringExtends();
     }
 }

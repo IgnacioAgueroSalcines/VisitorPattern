@@ -49,6 +49,7 @@
     <Compile Include="Comprimido.cs" />
     <Compile Include="Directorio.cs" />
     <Compile Include="EnlaceDirecto.cs" />
+    <Compile Include="ImprimeArbolExtendido.cs" />
     <Compile Include="ImprimeArbolCompacto.cs" />
     <Compile Include="IVisitor.cs" />
     <Compile Include="Program.cs" />

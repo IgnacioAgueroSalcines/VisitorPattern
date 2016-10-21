@@ -35,5 +35,20 @@ namespace Composite
             int result=(int)Math.Round(res*0.3, 0);
             return result;
         }
+
+       
+
+        public override String ToStringExtends()
+        {
+            String res = "C " + this.nombre + ".zip"; 
+            res += "\n";
+            for (int i = 0; i < componentes.Count; i++)
+            {
+                res += componentes[i].ToStringExtends() + "  ";
+            }
+            return res;
+           
+        }
+
     }
 }

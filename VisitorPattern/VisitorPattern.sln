@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorPattern", "VisitorPattern\VisitorPattern.csproj", "{9A28ADE3-4DA5-4EB3-A355-7DCD0A58B96B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{6D85C7FA-BFEE-4E59-ADD0-BBE6FDD3D716}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorPatternConsole", "VisitorPatternConsole\VisitorPatternConsole.csproj", "{0C8D6DA6-E6AC-49DE-9053-EC300A6C5334}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9A28ADE3-4DA5-4EB3-A355-7DCD0A58B96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A28ADE3-4DA5-4EB3-A355-7DCD0A58B96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A28ADE3-4DA5-4EB3-A355-7DCD0A58B96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A28ADE3-4DA5-4EB3-A355-7DCD0A58B96B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6D85C7FA-BFEE-4E59-ADD0-BBE6FDD3D716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6D85C7FA-BFEE-4E59-ADD0-BBE6FDD3D716}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D85C7FA-BFEE-4E59-ADD0-BBE6FDD3D716}.Release|Any CPU.ActiveCfg = Release|Any CPU

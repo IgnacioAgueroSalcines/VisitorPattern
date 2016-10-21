@@ -43,6 +43,10 @@ namespace Composite
             return this.nombre;
         }
 
+        public override String ToStringExtends()
+        {
+            return "E "+this.nombre;
+        }
 
     }
 }

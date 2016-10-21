@@ -7,26 +7,26 @@ using Composite;
 
 namespace VisitorPattern
 {
-    public class ImprimeArbolCompacto : IVisitor
+    public class ImprimeArbolExtendido : IVisitor
     {
         public void imprimeArchivo(Archivo a)
         {
-            Console.WriteLine(a.ToString());
+            Console.WriteLine(a.ToStringExtends());
         }
 
         public void ImprimeComprimido(Comprimido c)
         {
-            Console.WriteLine(c.ToString());
+            Console.WriteLine(c.ToStringExtends());
         }
 
         public void ImprimeDirectorio(Directorio d)
         {
-            Console.WriteLine(d.ToString());
+            Console.WriteLine(d.ToStringExtends());
         }
 
         public void ImprimeEnlace(EnlaceDirecto e)
         {
-            Console.WriteLine(e.ToString());
+            Console.WriteLine(e.ToStringExtends());
         }
     }
 }

@@ -40,11 +40,10 @@ namespace Composite
 
         public override String ToStringExtends()
         {
-            String res = "C " + this.nombre + ".zip"; 
-            res += "\n";
+            String res = "C " + this.nombre + ".zip\n"; 
             for (int i = 0; i < componentes.Count; i++)
             {
-                res += componentes[i].ToStringExtends() + "  ";
+                res += insertaTabulaciones(componentes[i].orden) + componentes[i].ToStringExtends() + "\n";
             }
             return res;
            

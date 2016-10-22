@@ -46,7 +46,7 @@ namespace Composite
             res += "\n";
             for (int i = 0; i < componentes.Count; i++)
             {
-                res += componentes[i].ToStringExtends() + "  ";
+                res += insertaTabulaciones(componentes[i].orden) + componentes[i].ToStringExtends() + "\n";
             }
             return res;
         }

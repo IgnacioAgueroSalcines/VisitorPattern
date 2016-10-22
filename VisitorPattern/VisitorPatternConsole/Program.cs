@@ -41,22 +41,25 @@ namespace VisitorPatternConsole
             composite.addComponente(e);
             composite.addComponente(arc);
             composite.addComponente(composite2);
+            composite.addComponente(new Archivo("hoja5",10));
 
             composite2.addComponente(new Archivo("hoja3", 5));
             composite2.addComponente(composite3);
+            composite2.addComponente(new Archivo("hoja6", 10));
 
             composite3.addComponente(new Archivo("hoja1", 5));
             composite3.addComponente(new Archivo("hoja2", 5));
+            composite3.addComponente(new Archivo("hoja7", 10));
 
-            
 
-            
 
-            
+
+
+
 
             //fin creacion del arbol
 
-            
+
 
             return composite;
         }

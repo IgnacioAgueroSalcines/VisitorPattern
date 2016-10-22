@@ -15,6 +15,8 @@ namespace Composite
         public abstract int elementos();
         public abstract void accept(IVisitor v);
         public abstract String ToStringExtends();
-        
+        public abstract void actualizaOrden(int _orden);
+
+
     }
 }

@@ -25,6 +25,11 @@ namespace Composite
             orden = 0;
         }
 
+        public override void actualizaOrden(int _orden)
+        {
+            throw new Exception("Este clase no tiene dicha capacidad");
+        }
+
         public override void accept(IVisitor v)
         {
             v.ImprimeEnlace(this);

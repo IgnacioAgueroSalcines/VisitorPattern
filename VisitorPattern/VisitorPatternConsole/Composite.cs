@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VisitorPattern;
 
 namespace Composite
@@ -26,8 +23,29 @@ namespace Composite
         /// <param name="c"></param>
         public  void addComponente(Componente c)
         {
-            c.orden=c.orden+this.orden+1;
             componentes.Add(c);
+            this.actualizaOrden(this.orden);
+            
+        }
+        
+        /// <summary>
+        /// Metodo que recorre la lista de componentes y les actualiza el orden
+        /// _orden es el orden del padre
+        /// </summary>
+        public override void actualizaOrden(int _orden)
+        {
+            for (int i=0;i<componentes.Count;i++)
+            {
+                componentes[i].orden= _orden + 1;
+                this.GetType();
+                Console.WriteLine(componentes[i].GetType().Name);
+                if (componentes[i].GetType().Name.Equals("Directorio"))
+                {
+
+                    componentes[i].actualizaOrden(componentes[i].orden);
+                }
+
+            }
         }
 
 
@@ -37,6 +55,7 @@ namespace Composite
         /// <param name="c"></param>
         public  void removeComponente(Componente c)
         {
+            this.actualizaOrden(this.orden);
             componentes.Remove(c);
         }
 
@@ -58,11 +77,19 @@ namespace Composite
         public abstract override void accept(IVisitor v);
         public abstract override int getTamano();
 
-        public List<Componente> getHijos()
+        /// <summary>
+        /// Metodo observador de los componentes
+        /// </summary>
+        /// <returns></returns>
+        public List<Componente> getComponentes()
         {
             return componentes;
         }
 
+        /// <summary>
+        /// Metodo que devuelve un string para mostrar
+        /// </summary>
+        /// <returns></returns>
         public  override String ToString()
         {
             String res = this.nombre + "\n";
@@ -73,6 +100,11 @@ namespace Composite
             return res;
         }
 
+        /// <summary>
+        /// Metodo que devuelve un string con el numero de tabulaciones a introducir al pintar por pantalla
+        /// </summary>
+        /// <param name="nivel"></param>
+        /// <returns></returns>
         public string insertaTabulaciones(int nivel)
         {
             String res = "";

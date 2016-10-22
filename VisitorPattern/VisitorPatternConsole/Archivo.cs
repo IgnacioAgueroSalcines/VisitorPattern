@@ -23,6 +23,12 @@ namespace Composite
             v.imprimeArchivo(this);
         }
 
+        
+        public override void actualizaOrden(int _orden)
+        {
+            throw new Exception("Este clase no tiene dicha capacidad");
+        }
+
         /// <summary>
         /// Retorna el numero de elementos hijos mas el mismo
         /// </summary>

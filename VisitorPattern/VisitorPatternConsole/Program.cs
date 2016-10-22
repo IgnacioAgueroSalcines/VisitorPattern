@@ -36,21 +36,27 @@ namespace VisitorPatternConsole
             Directorio composite = new Directorio("root");
             Directorio composite2 = new Directorio("dir");
             Comprimido composite3 = new Comprimido("comp");
-
-
-            composite3.addComponente(new Archivo("hoja1", 5));
-            composite3.addComponente(new Archivo("hoja2", 5));
-
-            composite2.addComponente(new Archivo("hoja3", 5));
-            composite2.addComponente(composite3);
-
             EnlaceDirecto e = new EnlaceDirecto(arc2);
 
             composite.addComponente(e);
             composite.addComponente(arc);
             composite.addComponente(composite2);
+
+            composite2.addComponente(new Archivo("hoja3", 5));
+            composite2.addComponente(composite3);
+
+            composite3.addComponente(new Archivo("hoja1", 5));
+            composite3.addComponente(new Archivo("hoja2", 5));
+
             
+
+            
+
+            
+
             //fin creacion del arbol
+
+            
 
             return composite;
         }

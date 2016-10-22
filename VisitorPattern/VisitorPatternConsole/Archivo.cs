@@ -8,10 +8,12 @@ namespace Composite
     /// </summary>
     public class Archivo: Renombrable
     {
+        
         public Archivo(String _nombre,int _tamano) : base(_nombre)
         {
             tamano = _tamano;
             nombre = _nombre;
+            orden = 0;
         }
 
         public int tamano { get; set; }

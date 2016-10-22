@@ -26,6 +26,7 @@ namespace Composite
         /// <param name="c"></param>
         public  void addComponente(Componente c)
         {
+            c.orden=c.orden+this.orden+1;
             componentes.Add(c);
         }
 
@@ -49,6 +50,7 @@ namespace Composite
             for (int i = 0; i < componentes.ToArray().Length; i++)
             {
                 res += componentes[i].elementos();
+                orden = 0;
             }
             return res;
         }
@@ -63,11 +65,20 @@ namespace Composite
 
         public  override String ToString()
         {
-            String res = this.nombre;
-            res += "\n";
+            String res = this.nombre + "\n";
             for (int i = 0; i < componentes.Count; i++)
             {
-                res += componentes[i].ToString() + "  ";
+                res += insertaTabulaciones(componentes[i].orden) +componentes[i].ToString() + "\n";
+            }
+            return res;
+        }
+
+        public string insertaTabulaciones(int nivel)
+        {
+            String res = "";
+            for (int i=0;i<nivel;i++)
+            {
+                res += "\t";
             }
             return res;
         }

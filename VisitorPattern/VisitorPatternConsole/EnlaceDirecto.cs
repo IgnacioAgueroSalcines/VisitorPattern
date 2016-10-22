@@ -15,12 +15,14 @@ namespace Composite
         public int tamano;//medido en Kb
         public String nombre { get; }
         private Renombrable elemento;
+        
 
         public EnlaceDirecto(Renombrable e) 
         {
             tamano = 1;
             nombre = e.nombre;
             elemento = e;
+            orden = 0;
         }
 
         public override void accept(IVisitor v)
@@ -48,5 +50,6 @@ namespace Composite
             return "E "+this.nombre;
         }
 
+        
     }
 }

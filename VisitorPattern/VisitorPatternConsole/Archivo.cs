@@ -8,7 +8,13 @@ namespace Composite
     /// </summary>
     public class Archivo: Renombrable
     {
-        
+        public int tamano { get; set; }
+
+        /// <summary>
+        /// Metodo constructor de la clase
+        /// </summary>
+        /// <param name="_nombre"></param>
+        /// <param name="_tamano"></param>
         public Archivo(String _nombre,int _tamano) : base(_nombre)
         {
             tamano = _tamano;
@@ -16,8 +22,8 @@ namespace Composite
             orden = 0;
         }
 
-        public int tamano { get; set; }
-
+        
+        
         public override void accept(IVisitor v)
         {
             v.imprimeArchivo(this);
@@ -29,25 +35,28 @@ namespace Composite
             throw new Exception("Este clase no tiene dicha capacidad");
         }
 
-        /// <summary>
-        /// Retorna el numero de elementos hijos mas el mismo
-        /// </summary>
-        /// <returns></returns>
+        
         public override int elementos()
         {
             return 1;
         }
 
+        
         public override int getTamano()
         {
             return tamano;
         }
 
+        /// <summary>
+        /// Metodo que devuelve un string con informacion basica del archivo
+        /// </summary>
+        /// <returns></returns>
         public override String ToString()
         {
             return this.nombre;
         }
 
+        
         public override String ToStringExtends()
         {
             return "F "+this.nombre+".jpg";

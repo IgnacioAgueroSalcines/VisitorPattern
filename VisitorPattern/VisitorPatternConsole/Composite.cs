@@ -37,8 +37,7 @@ namespace Composite
             for (int i=0;i<componentes.Count;i++)
             {
                 componentes[i].orden= _orden + 1;
-                this.GetType();
-                Console.WriteLine(componentes[i].GetType().Name);
+                
                 if (componentes[i].GetType().Name.Equals("Directorio") || componentes[i].GetType().Name.Equals("Comprimido"))
                 {
 

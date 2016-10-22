@@ -18,6 +18,10 @@ namespace Composite
             nombre = _nombre;
         }
 
+        /// <summary>
+        /// Metodo observador que cambia el nombre del elemento
+        /// </summary>
+        /// <param name="_nombre"></param>
         public void renombrar(String _nombre)
         {
            this.nombre = _nombre;
